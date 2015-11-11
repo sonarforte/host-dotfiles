@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# .bashrc
+# host-dotfiles
+# vanilla bash configuration for web host servers
+# 2015-11-10
+
+PS1='\[\e[0;92m\]\u@\h\[\e[m\]:\[\e[0;94m\]\w\[\e[m\] \[\e[0;92m\]\$\[\e[m\] \[\e[0;37m\]'
+
+# Set colors
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxCxcgedabagaced
+
+export VISUAL="vim"
+export EDITOR="vim"
+
+# Source aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi

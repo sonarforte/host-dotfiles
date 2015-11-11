@@ -1,0 +1,16 @@
+# Use grep with colors
+alias grep="grep --color=auto"
+
+# More easily edit .vimrc
+alias vimrc="vim ~/.vimrc"
+
+# mkdir creates full path
+alias mkdir="mkdir -p"
+
+# Easy shortcut to clear terminal
+alias c="clear"
+
+# Easily edit .aliases
+alias aliases="vim ~/.aliases"
+
+
