@@ -25,6 +25,7 @@ for file in "${runcoms[@]}"; do
         fi
     fi
     # Link new rc file to home directory
+    rm $dotfile 
     ln -s "$file" "$dotfile" 
 
 done
