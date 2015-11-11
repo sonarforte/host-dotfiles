@@ -6,7 +6,7 @@ if [ ! -d ./runcoms_old ]; then
 fi
 
 # List all rc files supported by host-dotfiles
-runcoms=(./runcoms/*)
+runcoms=(runcoms/*)
 
 for file in "${runcoms[@]}"; do
     #echo $file
@@ -26,7 +26,7 @@ for file in "${runcoms[@]}"; do
     fi
     # Link new rc file to home directory
     rm $dotfile 
-    ln -s "$file" "$dotfile" 
+    ln -s "$PWD/$file" "$dotfile" 
 
 done
 echo "Finished linking files to home directory"

@@ -13,4 +13,4 @@ alias c="clear"
 # Easily edit .aliases
 alias aliases="vim ~/.aliases"
 
-
+alias la="ls -la"
