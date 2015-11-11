@@ -30,3 +30,4 @@ for file in "${runcoms[@]}"; do
 
 done
 echo "Finished linking files to home directory"
+exit 0
