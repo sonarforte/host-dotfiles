@@ -4,6 +4,11 @@
 # vanilla bash configuration for web host servers
 # 2015-11-10
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 PS1='\[\e[0;92m\]\u@\h\[\e[m\]:\[\e[0;94m\]\w\[\e[m\] \[\e[0;92m\]\$\[\e[m\] \[\e[0;37m\]'
 
 # Set colors
@@ -18,7 +23,4 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-fi
+
