@@ -14,3 +14,4 @@ alias c="clear"
 alias aliases="vim ~/.aliases"
 
 alias la="ls -la"
+alias ll="ls -l"
