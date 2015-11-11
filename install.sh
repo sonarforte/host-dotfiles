@@ -14,7 +14,7 @@ for file in "${runcoms[@]}"; do
     #echo $dotname
     # Test if diff returns a string: "the files differ..." 
     dotfile="$HOME/.$dotname" 
-    echo $dotfile
+    #echo $dotfile
     # Copy old dotfiles to runcoms_old directory
     if [ -f $dotfile ]; then
         if [ -n "`diff "$dotfile" "$file"`" ]; then 
@@ -25,6 +25,7 @@ for file in "${runcoms[@]}"; do
         fi
     fi
     # Link new rc file to home directory
+    echo "Removing old link and re-linking $dotfile..."
     rm $dotfile 
     ln -s "$PWD/$file" "$dotfile" 
 
