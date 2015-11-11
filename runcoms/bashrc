@@ -17,3 +17,8 @@ export EDITOR="vim"
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
