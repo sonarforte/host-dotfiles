@@ -9,9 +9,9 @@ fi
 runcoms=(./runcoms/*)
 
 for file in "${runcoms[@]}"; do
-    echo $file
+    #echo $file
     dotname=$(basename "$file")
-    echo $dotname
+    #echo $dotname
     # Test if diff returns a string: "the files differ..." 
     dotfile="$HOME/.$dotname" 
     echo $dotfile
@@ -21,7 +21,7 @@ for file in "${runcoms[@]}"; do
             echo "Copying old dotfiles..."
             date=$(date +"%Y-%m-%d:%k:%M")
             cat "$dotfile" > "./runcoms_old/$dotname-$date" 
-    
+            echo "Copied."    
         fi
     fi
     # Link new rc file to home directory
@@ -29,3 +29,4 @@ for file in "${runcoms[@]}"; do
     ln -s "$file" "$dotfile" 
 
 done
+echo "Finished linking files to home directory"
