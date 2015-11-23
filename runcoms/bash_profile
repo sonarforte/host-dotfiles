@@ -12,3 +12,5 @@ PATH=$PATH:$HOME/bin
 export PATH
 unset USERNAME
 
+eval `ssh-agent -s`
+ssh-add
