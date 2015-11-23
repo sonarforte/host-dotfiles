@@ -15,8 +15,6 @@ unset USERNAME
 eval `ssh-agent -s`
 
 for file in ~/.ssh/*; do
-
-for file in *; do
     if [ -f $file  ]; then
         if grep 'id_rsa' <<< $file | grep -v ".pub" ; then
             ssh-add "$file" 
