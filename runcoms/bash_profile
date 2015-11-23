@@ -13,4 +13,15 @@ export PATH
 unset USERNAME
 
 eval `ssh-agent -s`
-ssh-add
+
+for file in ~/.ssh/*; do
+
+for file in *; do
+    if [ -f $file  ]; then
+        if grep 'id_rsa' <<< $file | grep -v ".pub" ; then
+            ssh-add "$file" 
+            echo "Added $file to ssh-agent" 
+        fi
+
+    fi
+done
